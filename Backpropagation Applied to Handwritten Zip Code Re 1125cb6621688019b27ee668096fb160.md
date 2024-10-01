@@ -1,3 +1,11 @@
+---
+title: "Backpropagation Applied to Handwritten Zip Code Recognition"
+description: "This paper talks about applying Backpropgation to Zip Code"
+date: "2023-10-02"
+image: "https://raw.githubusercontent.com/AshishLakhimale23/blogs/main/images/contact-form.png"
+tags: ["CNN","Backprop, "LeCun", "Neural Networks"]
+---
+
 # Backpropagation Applied to Handwritten Zip Code Recognition
 
 ---
@@ -15,7 +23,7 @@
 - Preprocessing: The size of digit image varies but typically around 40 by 60 pixels, then a linear transformation is performed to make image fit in 16 x 16 pixel image.
 - The gray levels of each image are scaled and translated to fall within the range of -1 and 1
     
-    ![image.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/image.png)
+    ![Zip_code.png](https://github.com/sammmeeeer/Blog/blob/main/images/Zip_Code.png)
     
 
 ---
@@ -29,7 +37,7 @@
 - Layer H3 has 30 units, and is fully connected to H2. The number of connections between H2 and H3 is thus 5790 (30 times 192 plus 30 biases). The output layer has 10 units and is fully connected to H3, adding another 310 weights.
 - In summary, the network has 1256 units, 64660 connections and 9760 independent parameters.
 
-![Screenshot from 2024-10-01 11-54-29.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/Screenshot_from_2024-10-01_11-54-29.png)
+![Neural_Network_Arch.png](https://github.com/sammmeeeer/Blog/blob/main/images/Neural_Network_Architecture.png)
 
 - The nonlinear function used at each node was scaled by hyperbolic tangent symmetric function.
 - The output cost function was the mean squared error.
@@ -38,7 +46,7 @@
 
 ## Results
 
-![image.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/image%201.png)
+![image.png](https://github.com/sammmeeeer/Blog/blob/main/images/Arch.png)
 
 - The original paper produces the train error of 0.14 % and test error 5.00 %
 
