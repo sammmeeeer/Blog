@@ -2,7 +2,7 @@
 title: "Backpropagation Applied to Handwritten Zip Code Recognition"
 description: "This paper talks about applying Backpropgation to Zip Code"
 date: "2023-10-02"
-image: "https://raw.githubusercontent.com/AshishLakhimale23/blogs/main/images/contact-form.png"
+image: "https://github.com/sammmeeeer/Blog/blob/main/images/lecun1989.png"
 tags: ["CNN","Backprop, "LeCun", "Neural Networks"]
 ---
 
