@@ -1,0 +1,51 @@
+# Backpropagation Applied to Handwritten Zip Code Recognition
+
+---
+
+## Introduction
+
+- The paper talks about the ability of learning networks can be greatly enhanced by providing constraints from the task domain, and those constraints can be integrated into a backpropagation network through the architecture of the network.
+
+---
+
+## Zip Codes
+
+- Data Base: It consists of 9298 segmented numerals digitized from handwritten zip codes.
+- 7291 digits are used for training network and 2007 are used for testing the generalization performance.
+- Preprocessing: The size of digit image varies but typically around 40 by 60 pixels, then a linear transformation is performed to make image fit in 16 x 16 pixel image.
+- The gray levels of each image are scaled and translated to fall within the range of -1 and 1
+    
+    ![image.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/image.png)
+    
+
+---
+
+## Network Architecture
+
+- The network has three hidden layers H1, H2, H3 respectively.
+- H1 is composed of 12 groups and 64 units arranged as 12 independent 8 by 8 feature maps, this 12 features will be designated by H1 1, H1 2,...., H1 12.
+- Layer H1 comprises 768 units (8 by 8 times 12), 19,968 connections (768 times 26), but only 1086 parameters(786 biases plus 25 times 12 feature kernels).
+- Layer H2 composed of 12 features maps. Each feature map contains 16 units arranged in a 4 by 4 plane.
+- Layer H3 has 30 units, and is fully connected to H2. The number of connections between H2 and H3 is thus 5790 (30 times 192 plus 30 biases). The output layer has 10 units and is fully connected to H3, adding another 310 weights.
+- In summary, the network has 1256 units, 64660 connections and 9760 independent parameters.
+
+![Screenshot from 2024-10-01 11-54-29.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/Screenshot_from_2024-10-01_11-54-29.png)
+
+- The nonlinear function used at each node was scaled by hyperbolic tangent symmetric function.
+- The output cost function was the mean squared error.
+
+---
+
+## Results
+
+![image.png](Backpropagation%20Applied%20to%20Handwritten%20Zip%20Code%20Re%201125cb6621688019b27ee668096fb160/image%201.png)
+
+- The original paper produces the train error of 0.14 % and test error 5.00 %
+
+The code:
+
+https://github.com/sammmeeeer/ML-DL-Paper-Implementations/tree/main/cnn
+
+## Reference
+
+https://github.com/karpathy/lecun1989-repro
